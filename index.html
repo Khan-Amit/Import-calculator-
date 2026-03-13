@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Import Export Cost Calculator</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Import / Export Cost Calculator</h1>
+
+<!-- COUNTRY SELECTION -->
+
+<label>Import Country</label>
+<select id="country">
+
+<option value="thailand">Thailand</option>
+<option value="bangladesh">Bangladesh</option>
+
+</select>
+
+
+<!-- PRODUCT / HS CODE -->
+
+<label>Product (HS Code)</label>
+<select id="hsSelect">
+
+</select>
+
+
+<!-- BASIC COST INPUT -->
+
+<label>Unit Price</label>
+<input type="number" id="price">
+
+<label>Quantity</label>
+<input type="number" id="qty">
+
+<label>Freight Cost</label>
+<input type="number" id="freight">
+
+<label>Insurance</label>
+<input type="number" id="insurance">
+
+
+<!-- SHIPPING TYPE -->
+
+<label>Shipment Type</label>
+<select id="container">
+
+<option value="LCL">Small Shipment (LCL)</option>
+<option value="C20">20ft Container</option>
+<option value="C40">40ft Container</option>
+
+</select>
+
+
+<!-- SELLING PRICE -->
+
+<label>Selling Price Per Unit</label>
+<input type="number" id="sell">
+
+
+<!-- CALCULATE BUTTON -->
+
+<button onclick="calculate()">Calculate Import Cost</button>
+
+
+<h2>Result</h2>
+
+<div id="result">
+
+Waiting for calculation...
+
+</div>
+
+
+<hr>
+
+
+<!-- SHIPMENT PLANNER -->
+
+<h2>Shipment Profit Planner</h2>
+
+<label>Landing Cost Per Unit</label>
+<input type="number" id="unitCost">
+
+<label>Selling Price Per Unit</label>
+<input type="number" id="sellPlanner">
+
+<label>Shipment Type</label>
+<select id="containerPlanner">
+
+<option value="LCL">Small Shipment</option>
+<option value="C20">20ft Container</option>
+<option value="C40">40ft Container</option>
+
+</select>
+
+<button onclick="shipmentPlan()">Plan Shipment</button>
+
+<div id="planner">
+
+Shipment planner result will appear here.
+
+</div>
+
+
+<!-- JAVASCRIPT FILES -->
+
+<script src="hs_database.js"></script>
+<script src="shipping.js"></script>
+<script src="planner.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
